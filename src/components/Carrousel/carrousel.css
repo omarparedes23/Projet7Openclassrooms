@@ -64,5 +64,6 @@
 
 	.imagecount {
 		top: 80%;
+		display: none;
 	}
 }

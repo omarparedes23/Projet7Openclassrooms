@@ -21,16 +21,28 @@ export default function Carrousel({ listephotos }) {
 			style={{ backgroundImage: `url(${listephotos[initialValue]})` }}
 			className='carrousel'
 		>
-			<img
-				className='vectorright'
-				src={vectorright}
-				alt=''
-				onClick={nextImage}
-			/>
-			<img className='vectorleft' src={vectorleft} alt='' onClick={lastImage} />
-			<p className='imagecount'>
-				{initialValue + 1}/{listephotos.length}
-			</p>
+			{listephotos.length > 1 ? (
+				<>
+					<img
+						className='vectorright'
+						src={vectorright}
+						alt=''
+						onClick={nextImage}
+					/>
+					<img
+						className='vectorleft'
+						src={vectorleft}
+						alt=''
+						onClick={lastImage}
+					/>
+
+					<p className='imagecount'>
+						{initialValue + 1}/{listephotos.length}
+					</p>
+				</>
+			) : (
+				<div></div>
+			)}
 		</div>
 	);
 }
