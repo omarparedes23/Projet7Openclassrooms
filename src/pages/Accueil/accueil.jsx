@@ -5,6 +5,7 @@ import Banner from '../../components/Banner/banner';
 import Card from '../../components/Card/card';
 import { NavLink } from 'react-router-dom';
 import listejson from '../../assets/logements.json';
+
 export default function Accueil() {
 	return (
 		<div>
